@@ -21,12 +21,12 @@ jobs:
               run: |
                 git config user.email "no-reply@amazon.com"
                 git config user.name "corretto-github-robot"
-            - name: "Merge openjdk/jdk:master to the corretto-jdk:develop"
+            - name: "Merge openjdk/jdk19:master to the corretto-19:develop"
               run: |
                 git fetch $UPSTREAM_REMOTE master || exit 1
                 git merge -m "Merge upstream-jdk" FETCH_HEAD
             - name: "Update Corretto version"
               shell: bash
               run: bash ./.github/scripts/update-version.sh $UPSTREAM_REMOTE
-            - name: "Push to the corretto-jdk"
+            - name: "Push to the corretto-19"
               run: git push origin $LOCAL_BRANCH
