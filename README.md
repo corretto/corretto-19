@@ -1,4 +1,4 @@
-## Corretto JDK
+## Corretto 19
 
 Amazon Corretto is a no-cost, multiplatform,
 production-ready distribution of the Open Java Development Kit (OpenJDK).
